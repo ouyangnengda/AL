@@ -15,7 +15,6 @@ public class BoxAndKey {
         test();
     }
 
-
     private static void test() {
         Scanner input = new Scanner(System.in);
         int sumA = input.nextInt();
@@ -30,21 +29,16 @@ public class BoxAndKey {
         for (int i = 0; i < sumB; i++) {
             b[i] = input.nextInt();
         }
-
         System.out.println(boxAndKey(a, b));
     }
 
     private static int boxAndKey(int[] a, int[] b) {
         //没用过的钥匙为0，用过的钥匙为1
         int[] bit = new int[b.length];
-        for (int i = 0; i < bit.length; i++) {
-            bit[i] = 0;
-        }
 
         //表示可打开的宝箱总数
         int sum = 0;
         for (int i = 0; i < a.length; i++) {
-
 
             for (int j = 0; j < b.length; j++) {
                 //如果i宝箱和j钥匙相加为奇数 && 钥匙没用过
@@ -55,8 +49,6 @@ public class BoxAndKey {
                 }
             }
         }
-
         return sum;
-
     }
 }
