@@ -17,38 +17,29 @@ public class BoxAndKey {
 
     private static void test() {
         Scanner input = new Scanner(System.in);
-        int sumA = input.nextInt();
-        int sumB = input.nextInt();
+        long sumA = input.nextInt();
+        long sumB = input.nextInt();
 
-        int[] a = new int[sumA];
-        for (int i = 0; i < sumA; i++) {
-            a[i] = input.nextInt();
-        }
-
-        int[] b = new int[sumB];
-        for (int i = 0; i < sumB; i++) {
-            b[i] = input.nextInt();
-        }
-        System.out.println(boxAndKey(a, b));
-    }
-
-    private static int boxAndKey(int[] a, int[] b) {
-        //没用过的钥匙为0，用过的钥匙为1
-        int[] bit = new int[b.length];
-
-        //表示可打开的宝箱总数
-        int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-
-            for (int j = 0; j < b.length; j++) {
-                //如果i宝箱和j钥匙相加为奇数 && 钥匙没用过
-                if ((a[i]+b[j])%2 == 1 && bit[j] == 0) {
-                    bit[j] = 1;
-                    sum = sum + 1;
-                    break;
-                }
+        long a1 = 0;
+        long a2 = 0;
+        for (long i = 0; i < sumA; i++) {
+            if (input.nextInt() % 2 == 1) {
+                ++a1;
+            } else {
+                ++a2;
             }
         }
-        return sum;
+
+        long b1 = 0;
+        long b2 = 0;
+        for (long i = 0; i < sumB; i++) {
+            if (input.nextInt() % 2 == 1) {
+                ++b1;
+            } else {
+                ++b2;
+            }
+        }
+        System.out.println(Math.min(a1, b2) + Math.min(a2, b1));
+
     }
 }
