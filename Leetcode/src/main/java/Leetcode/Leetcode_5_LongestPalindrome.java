@@ -25,6 +25,6 @@ public class Leetcode_5_LongestPalindrome {
     }
 
     public static String leftPalindrome(String s, int i) {
-
+         return "";
     }
 }
