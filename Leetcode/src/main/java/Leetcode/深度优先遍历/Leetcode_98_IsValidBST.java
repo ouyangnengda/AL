@@ -13,7 +13,7 @@ public class Leetcode_98_IsValidBST {
 
     }
 
-    public static boolean isValidBST(TreeNode root) {
+    /*public static boolean isValidBST(TreeNode root) {
         if (root == null) {
             return false;
         }
@@ -28,6 +28,6 @@ public class Leetcode_98_IsValidBST {
 
         }
 
-    }
+    }*/
 }
 
