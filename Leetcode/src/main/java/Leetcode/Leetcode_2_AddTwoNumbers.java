@@ -40,9 +40,3 @@ public class Leetcode_2_AddTwoNumbers {
         return result.next;
     }
 }
-
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-}
